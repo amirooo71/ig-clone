@@ -14,7 +14,7 @@ import { Link } from "@inertiajs/vue3";
                     aria-expanded="false"
                 >
                     <div class="py-2.5 text-center dark:text-white">
-                        Upload anything in your mind
+                        What is in your mind
                     </div>
                 </div>
                 <div
