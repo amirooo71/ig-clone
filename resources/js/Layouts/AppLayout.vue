@@ -26,7 +26,9 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-    Echo.leave(`App.Models.User.${page.props.auth.user.id}`);
+    if (page.props.auth.user) {
+        Echo.leave(`App.Models.User.${page.props.auth.user.id}`);
+    }
 });
 </script>
 
