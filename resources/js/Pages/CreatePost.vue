@@ -20,6 +20,7 @@ const FilePond = vueFilePond(
 );
 
 const files = ref([]);
+const disabled = ref(false);
 
 const form = reactive({
     description: "",
@@ -35,8 +36,12 @@ const handleFiles = (fileItems) => {
 
 const onSubmit = () => {
     router.post("/post", form, {
+        onBefore: () => {
+            disabled.value = true;
+        },
         onSuccess: () => {
             eventBus.emit("load-home-data");
+            disabled.value = false;
         },
     });
 };
@@ -98,7 +103,9 @@ const onSubmit = () => {
                     <button
                         v-if="files.length"
                         @click="onSubmit"
+                        :disabled="disabled"
                         class="text-white bg-blue-600 rounded-lg py-1.5 px-5 text-sm absolute top-0 m-2.5 right-0 uk-animation-slide-right-small"
+                        :class="{ 'bg-gray-400': disabled }"
                     >
                         Share
                     </button>
