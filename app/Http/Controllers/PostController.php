@@ -18,8 +18,6 @@ class PostController extends Controller
     public function store()
     {
 
-        sleep(2);
-
         if (count(request('media')) > 1) {
             abort(403);
         }
