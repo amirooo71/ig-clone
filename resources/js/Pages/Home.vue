@@ -27,7 +27,7 @@ const { items, reset, canLoadMoreItems } = useInfiniteScroll("posts", landmark);
 <template>
     <AppLayout>
         <div class="main__inner">
-            <!--            <Stories />-->
+            <Stories />
             <div
                 class="flex max-lg:flex-col xl:gap-10 md:gap-3 md:mt-10"
                 id="js-oversized"
