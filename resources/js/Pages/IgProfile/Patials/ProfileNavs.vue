@@ -15,12 +15,12 @@ defineProps(["userId"]);
                     <Link
                         :href="route('profile.posts.show', userId)"
                         :class="{
-                            'border-gray-800': route().current(
+                            'border-gray-800 border-t-2': route().current(
                                 'profile.posts.show',
                                 userId,
                             ),
                         }"
-                        class="flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent"
+                        class="flex items-center p-4 py-2.5 -mb-px"
                     >
                         <ion-icon
                             class="mr-2 text-2xl"
@@ -33,12 +33,12 @@ defineProps(["userId"]);
                     <Link
                         :href="route('profile.reels.show', userId)"
                         :class="{
-                            'border-gray-800': route().current(
+                            'border-gray-800 border-t-2': route().current(
                                 'profile.reels.show',
                                 userId,
                             ),
                         }"
-                        class="flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent"
+                        class="flex items-center p-4 py-2.5 -mb-px"
                     >
                         <ion-icon
                             class="mr-2 text-2xl"
@@ -51,12 +51,12 @@ defineProps(["userId"]);
                     <Link
                         :href="route('profile.saved.show', userId)"
                         :class="{
-                            'border-gray-800': route().current(
+                            'border-gray-800 border-t-2': route().current(
                                 'profile.saved.show',
                                 userId,
                             ),
                         }"
-                        class="flex items-center p-4 py-2.5 -mb-px border-t-2 border-transparent"
+                        class="flex items-center p-4 py-2.5 -mb-px"
                     >
                         <ion-icon
                             class="mr-2 text-2xl"

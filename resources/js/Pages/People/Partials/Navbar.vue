@@ -11,9 +11,10 @@ import { Link, router } from "@inertiajs/vue3";
                 <Link
                     :href="route('people.followers')"
                     :class="{
-                        'border-gray-800': route().current('people.followers'),
+                        'border-gray-800 border-b-2':
+                            route().current('people.followers'),
                     }"
-                    class="inline-block py-5 border-b-2 border-transparent"
+                    class="inline-block py-5"
                 >
                     followers {{ $page.props.auth.user.followers_count }}
                 </Link>
@@ -22,9 +23,10 @@ import { Link, router } from "@inertiajs/vue3";
                 <Link
                     :href="route('people.followings')"
                     :class="{
-                        'border-gray-800': route().current('people.followings'),
+                        'border-gray-800 border-b-2':
+                            route().current('people.followings'),
                     }"
-                    class="inline-block py-5 border-b-2 border-transparent"
+                    class="inline-block py-5"
                 >
                     following {{ $page.props.auth.user.followings_count }}
                 </Link>
@@ -33,10 +35,10 @@ import { Link, router } from "@inertiajs/vue3";
                 <Link
                     :href="route('people.suggestions')"
                     :class="{
-                        'border-gray-800':
+                        'border-gray-800 border-b-2':
                             route().current('people.suggestions'),
                     }"
-                    class="inline-block py-5 border-b-2 border-transparent"
+                    class="inline-block py-5"
                 >
                     Suggestions
                 </Link>
